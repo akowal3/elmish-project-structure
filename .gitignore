@@ -1,0 +1,21 @@
+
+# Fable compilation
+.fable-build/
+public/scripts/
+
+*.lock
+
+yarn*
+
+packages/
+paket-files/
+node_modules/
+.paket/
+
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+.fake
+.ionide

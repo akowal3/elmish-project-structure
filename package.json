@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "init": "yarn install && dotnet tool restore && dotnet paket install",
+    "build": "dotnet fable ./src --outDir ./.fable-build && node build.js --build",
+    "serve": "dotnet fable watch ./src --outDir ./.fable-build --run node build.js --watch",
+    "clean": "rm -rf .fable-build/ public/scripts/",
+    "purge": "yarn run clean && rm -rf node_modules/ packages/ paket-files/ .paket/ src/bin/ src/obj/ *.lock yarn*"
+  },
+  "devDependencies": {
+    "servor": "^4.0.2"
+  },
+  "dependencies": {
+    "esbuild": "^0.13.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
